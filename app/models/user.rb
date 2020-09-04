@@ -16,5 +16,5 @@ class User < ApplicationRecord
   has_many :shippings, dependent: :destroy
   has_many :cart_images, dependent: :destroy
   has_many :orders, dependent: :destroy
-  validates :name, presence: true
+  validates :name, presence: true, length: {minimum: 2, maximum: 20}
 end
