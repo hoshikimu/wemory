@@ -56,16 +56,16 @@ SNSが本質ではない、写真投稿ツールの作成。
 お気に入りの写真をアルバムにまとめたい時  
 
 ## 設計書
-・ER図
+・ER図  
 file:///Users/start/Downloads/wemory_er.pdf
 
-・ui_flow
+・ui_flow  
 file:///Users/start/Downloads/wemory%20uiflow.pdf
 
-・ワイヤーフレーム
+・ワイヤーフレーム  
 file:///Users/start/Downloads/Copy%20of%20wemory_wf.pdf
 
-・テーブル定義書
+・テーブル定義書  
 https://docs.google.com/spreadsheets/d/1RZM5XnXEFfrOBrA2H-xpGff4QfWNa4yjUcXPO1ySZ_w/edit#gid=1980606224
 
 ### 機能一覧
