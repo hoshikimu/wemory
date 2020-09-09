@@ -13,8 +13,8 @@ class HomesController < ApplicationController
   end
 
   def top
-    @main_post_images = PostImage.where(user_id: current_user.id).order("RAND()").limit(30)
+    @main_post_images = PostImage.where(user_id: current_user.id).order(ENV['RANDOM']).limit(30)
     @categories = Category.where(user_id: current_user.id)
-    @post_images = PostImage.where(user_id: current_user.id).order("RAND()").limit(9)
+    @post_images = PostImage.where(user_id: current_user.id).order(ENV['RANDOM']).limit(9)
   end
 end
