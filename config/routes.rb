@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     resource :cart_images, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy, :index]
   end
-  resources :categories
-  resources :shippings
+  resources :categories, except: :index
+  resources :shippings, except: :index
   
   get '/orders/about' => 'orders#about'
   get '/orders/completion' => 'orders#completion'
