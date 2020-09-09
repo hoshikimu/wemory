@@ -89,7 +89,7 @@ describe 'ヘッダーのテスト' do
 
     context 'ヘッダーのリンクを確認' do
       subject { current_path }
-      it 'About画面に遷移する' do
+      it 'Top画面に遷移する' do
         click_link 'wemory'
         is_expected.to eq(top_path)
       end
