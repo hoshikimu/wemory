@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_29_053311) do
+ActiveRecord::Schema.define(version: 2020_09_09_090141) do
 
   create_table "approvals", force: :cascade do |t|
     t.integer "approver_id", null: false
@@ -46,6 +46,21 @@ ActiveRecord::Schema.define(version: 2020_08_29_053311) do
     t.integer "post_image_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer "visitor_id", null: false
+    t.integer "visited_id", null: false
+    t.integer "post_image_id", null: false
+    t.integer "post_comment_id", null: false
+    t.string "action", null: false
+    t.boolean "checked", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_comment_id"], name: "index_notifications_on_post_comment_id"
+    t.index ["post_image_id"], name: "index_notifications_on_post_image_id"
+    t.index ["visited_id"], name: "index_notifications_on_visited_id"
+    t.index ["visitor_id"], name: "index_notifications_on_visitor_id"
   end
 
   create_table "order_images", force: :cascade do |t|
