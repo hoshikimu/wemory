@@ -29,6 +29,17 @@
               <%= link_to "承認", approvals_search_path, class:"child-nav-item3" %>
               <%= link_to "カート", cart_images_index_path, class:"child-nav-item4" %>
               <%= link_to "注文履歴", orders_path, class:"child-nav-item5" %>
+              <%= link_to "通知", notifications_path, class:"child-nav-item6" %>
+              <div class="p-notification-icon">
+                <% if unchecked_notifications.any? %>
+                  <i class="fas fa-circle"></i>
+                <% end %>
+              </div>
+              <div class="child-notification-icon">
+                <% if unchecked_notifications.any? %>
+                  <i class="fas fa-circle"></i>
+                <% end %>
+              </div>
             </span>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-item" %>
           </div>

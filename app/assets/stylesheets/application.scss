@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -172,6 +173,15 @@ header {
   z-index: 10;
 }
 
+.child-nav-item6 {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 420px;
+  left: 0px;
+  z-index: 10;
+}
+
 .nav-item:hover {
   background-color: rgba(0,0,0,0.9);
   color: white;
@@ -186,11 +196,17 @@ header {
   .child-nav-item2,
   .child-nav-item3,
   .child-nav-item4,
-  .child-nav-item5 {
+  .child-nav-item5,
+  .child-nav-item6 {
     display: block;
     background-color: rgba(255,255,255,0.9);
     color: #333;
     transition: background-color 900ms;
+  }
+  .child-notification-icon {
+    display: block;
+    color: orange;
+    z-index: 9998;
   }
 }
 
@@ -199,11 +215,27 @@ header {
   .child-nav-item2:hover,
   .child-nav-item3:hover,
   .child-nav-item4:hover,
-  .child-nav-item5:hover {
+  .child-nav-item5:hover,
+  .child-nav-item6:hover {
     background-color: rgba(0,0,0,0.9);
     color: white;
     transition: background-color 700ms;
   }
+}
+
+.p-notification-icon {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  color: orange;
+}
+
+.child-notification-icon {
+  display: none;
+  position: absolute;
+  top: 415px;
+  left: 10px;
+  color: orange;
 }
 
 .rsp-menu {
