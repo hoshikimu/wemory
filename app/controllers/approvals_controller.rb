@@ -41,6 +41,7 @@ class ApprovalsController < ApplicationController
     @new_approval.approvered_id = params[:user_id]
     @user = User.find(@new_approval.approvered_id)
     if @new_approval.save
+      @new_approval.create_notification_approve(current_user, @new_approval.approvered_id)
       flash[:success] = "#{@user.name}さんを承認しました！"
       redirect_to top_path
     else
@@ -64,6 +65,7 @@ class ApprovalsController < ApplicationController
     @approval = Approval.find_by(approver_id: current_user.id, approvered_id: @user.id)
     @approval.permission_status = params[:permission_status]
     if @approval.save
+      @approval.create_notification_edit_approve(current_user, @approval.approvered_id)
       flash[:success] = "#{@user.name}さんの権限を編集しました！"
       redirect_to approvals_search_path
     else

@@ -6,14 +6,21 @@
           <tr>
             <td>
               <%= notification.visitor.name %><span>さんが</span>
-              <%= link_to post_image_path(notification.post_image_id) do %>
-                <span class="visited-post-image">あなたの投稿</span>
-              <% end %>
               <% case notification.action
                 when "like" %>
+                <%= link_to post_image_path(notification.post_image_id) do %>
+                  <span class="visited-post-image">あなたの投稿</span>
+                <% end %>
                 にいいねしました！
                 <% when "comment" %>
+                <%= link_to post_image_path(notification.post_image_id) do %>
+                  <span class="visited-post-image">あなたの投稿</span>
+                <% end %>
                 にコメントしました！
+                <% when "approve" %>
+                あなたを承認しました！
+                <% when "edit_approve" %>
+                あなたの権限を変更しました！
               <% end %>
             </td>
             <td>
