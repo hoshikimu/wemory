@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/orders/about' => 'orders#about'
   get '/orders/completion' => 'orders#completion'
   resources :orders, except: :edit
+  resources :notifications, only: :index
 
   get '/top' => 'homes#top'
   get '/about' => 'homes#about'
