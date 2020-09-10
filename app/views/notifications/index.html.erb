@@ -11,7 +11,9 @@
               <% end %>
               <% case notification.action
                 when "like" %>
-                にいいねしました。
+                にいいねしました！
+                <% when "comment" %>
+                にコメントしました！
               <% end %>
             </td>
             <td>
