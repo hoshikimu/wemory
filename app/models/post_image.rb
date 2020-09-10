@@ -33,16 +33,15 @@ class PostImage < ApplicationRecord
   end
 
   def create_notification_comment(current_user, post_comment_id)
-    temp = Notification.where(visitor_id: current_user, visited_id: user_id, post_image_id: id, action: "comment")
-      notification = current_user.active_notifications.new(
-        visited_id: user_id,
-        post_image_id: id,
-        post_comment_id: post_comment_id,
-        action: "comment"
-      )
-      if notification.visitor_id == notification.visited_id
-        notification.checked = true
-      end
-      notification.save
+    notification = current_user.active_notifications.new(
+      visited_id: user_id,
+      post_image_id: id,
+      post_comment_id: post_comment_id,
+      action: "comment"
+    )
+    if notification.visitor_id == notification.visited_id
+      notification.checked = true
+    end
+    notification.save
   end
 end
