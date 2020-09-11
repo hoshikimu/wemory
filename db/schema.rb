@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_090141) do
     t.integer "visited_id", null: false
     t.integer "post_image_id"
     t.integer "post_comment_id"
+    t.string "permission_status"
     t.string "action", null: false
     t.boolean "checked", default: false, null: false
     t.datetime "created_at", null: false

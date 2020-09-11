@@ -5,6 +5,7 @@ class CreateNotifications < ActiveRecord::Migration[5.2]
       t.integer :visited_id, null: false
       t.integer :post_image_id
       t.integer :post_comment_id
+      t.string :permission_status
       t.string :action, dafault: "", null: false
       t.boolean :checked, default: false, null: false
       t.timestamps

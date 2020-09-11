@@ -18,9 +18,9 @@
                 <% end %>
                 にコメントしました！
                 <% when "approve" %>
-                あなたを承認しました！
+                あなたを<%= notification.permission_status %>として承認しました！
                 <% when "edit_approve" %>
-                あなたの権限を変更しました！
+                あなたの権限を<%= notification.permission_status %>へ変更しました！
               <% end %>
             </td>
             <td>
