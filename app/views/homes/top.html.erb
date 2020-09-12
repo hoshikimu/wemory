@@ -5,6 +5,9 @@
         <%= attachment_image_tag main_post_image, :image %>
       <% end %>
     </div>
+    <%= link_to slide_image_path do %>
+      <i class="fas fa-expand skp-expand"></i>
+    <% end %>
   </div>
   <div class="categories-container">
     <% @categories.each do |category| %>
