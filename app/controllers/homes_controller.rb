@@ -17,4 +17,8 @@ class HomesController < ApplicationController
     @categories = Category.where(user_id: current_user.id)
     @post_images = PostImage.where(user_id: current_user.id).order(ENV['RANDOM']).limit(9)
   end
+
+  def slide_image
+    @main_post_images = PostImage.where(user_id: current_user.id).order(ENV['RANDOM'])
+  end
 end

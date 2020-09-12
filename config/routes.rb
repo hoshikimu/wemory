@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :notifications, only: :index
 
   get '/top' => 'homes#top'
+  get '/slide_image' => 'homes#slide_image'
   get '/about' => 'homes#about'
 
   get 'approvals/search' => 'approvals#search'
