@@ -80,12 +80,12 @@ describe 'ユーザー権限のテスト' do
       it '会員登録画面に遷移できない' do
         visit new_user_registration_path
         expect(current_path).to eq(top_path)
-        expect(page).to have_content 'You are already signed in.'
+        expect(page).to have_content 'すでにログインしています。'
       end
       it 'ログイン画面に遷移できない' do
         visit new_user_session_path
         expect(current_path).to eq(top_path)
-        expect(page).to have_content 'You are already signed in.'
+        expect(page).to have_content 'すでにログインしています。'
       end
     end
   end
