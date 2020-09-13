@@ -36,8 +36,6 @@ ja:
         one:   "1年以上"
         other: "%{count}年以上"
 
-
-ja:
   devise:
     confirmations:
       confirmed: 'アカウントを登録しました。'
