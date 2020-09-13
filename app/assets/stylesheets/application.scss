@@ -418,6 +418,10 @@ footer {
     margin: 16px;
   }
 
+  .expand-skp-container {
+    height: 538px;
+  }
+
   // 投稿一覧
   .index-image-box img {
     width: 180px;
@@ -491,6 +495,11 @@ footer {
 
   .categories-container {
     margin: 60px auto 20px;
+  }
+
+  .expand-skp-container {
+    width: 70%;
+    height: 300px;
   }
 
   // 投稿一覧
@@ -581,6 +590,10 @@ footer {
     margin: 60px auto 20px;
   }
 
+  .skp-expand {
+    display: none;
+  }
+
   // 投稿一覧
   .index-image-boxes-container {
     width: 86%;
@@ -652,7 +665,7 @@ footer {
 
   .white-display-close-btn {
     margin-right: 20px;
-}
+  }
 
   #back {
     bottom: 80px;
@@ -711,8 +724,8 @@ footer {
   }
 
   .image-box img {
-  width: 300px;
-  height: 300px;
+    width: 300px;
+    height: 300px;
   }
 
   // 投稿一覧
