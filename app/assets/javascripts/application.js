@@ -140,7 +140,7 @@ $(function(){
     })
 });
 
-//投稿コメントのモーダルウィンドウ
+//新規投稿コメントのモーダルウィンドウ
 $(function(){
   $(".post-comment").click(function() {
     $(".post-comment-whitedisplay").fadeIn(200);
@@ -150,7 +150,7 @@ $(function(){
   });
 });
 
-//投稿コメントのモーダルウィンドウ
+//投稿コメント一覧のモーダルウィンドウ
 $(function(){
   $(".comment-icn").click(function() {
     $(".post-comments-whitedisplay").fadeIn(200);

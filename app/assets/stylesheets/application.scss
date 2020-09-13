@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -172,6 +173,15 @@ header {
   z-index: 10;
 }
 
+.child-nav-item6 {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 420px;
+  left: 0px;
+  z-index: 10;
+}
+
 .nav-item:hover {
   background-color: rgba(0,0,0,0.9);
   color: white;
@@ -186,11 +196,17 @@ header {
   .child-nav-item2,
   .child-nav-item3,
   .child-nav-item4,
-  .child-nav-item5 {
+  .child-nav-item5,
+  .child-nav-item6 {
     display: block;
     background-color: rgba(255,255,255,0.9);
     color: #333;
     transition: background-color 900ms;
+  }
+  .child-notification-icon {
+    display: block;
+    color: orange;
+    z-index: 9998;
   }
 }
 
@@ -199,11 +215,27 @@ header {
   .child-nav-item2:hover,
   .child-nav-item3:hover,
   .child-nav-item4:hover,
-  .child-nav-item5:hover {
+  .child-nav-item5:hover,
+  .child-nav-item6:hover {
     background-color: rgba(0,0,0,0.9);
     color: white;
     transition: background-color 700ms;
   }
+}
+
+.p-notification-icon {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  color: orange;
+}
+
+.child-notification-icon {
+  display: none;
+  position: absolute;
+  top: 415px;
+  right: 10px;
+  color: orange;
 }
 
 .rsp-menu {
@@ -212,6 +244,16 @@ header {
   float: right;
   margin-right: 50px;
   line-height: 70px;
+}
+
+.rsp-p-notification-icon {
+  display: none;
+  color: orange;
+  position: absolute;
+}
+
+.rsp-child-notification-icon {
+  color: orange;
 }
 
 .menu-whitedisplay {
@@ -376,6 +418,10 @@ footer {
     margin: 16px;
   }
 
+  .expand-skp-container {
+    height: 538px;
+  }
+
   // 投稿一覧
   .index-image-box img {
     width: 180px;
@@ -415,6 +461,12 @@ footer {
     display: block;
   }
 
+  .rsp-p-notification-icon {
+    display: block;
+    top: 13px;
+    right: 43px;
+  }
+
   .form-box {
     width: 70%;
     padding: 30px 30px;
@@ -443,6 +495,11 @@ footer {
 
   .categories-container {
     margin: 60px auto 20px;
+  }
+
+  .expand-skp-container {
+    width: 70%;
+    height: 300px;
   }
 
   // 投稿一覧
@@ -533,6 +590,10 @@ footer {
     margin: 60px auto 20px;
   }
 
+  .skp-expand {
+    display: none;
+  }
+
   // 投稿一覧
   .index-image-boxes-container {
     width: 86%;
@@ -596,9 +657,15 @@ footer {
     margin-right: 20px;
   }
 
+  .rsp-p-notification-icon {
+    display: block;
+    top: 13px;
+    right: 13px;
+  }
+
   .white-display-close-btn {
     margin-right: 20px;
-}
+  }
 
   #back {
     bottom: 80px;
@@ -657,8 +724,8 @@ footer {
   }
 
   .image-box img {
-  width: 300px;
-  height: 300px;
+    width: 300px;
+    height: 300px;
   }
 
   // 投稿一覧

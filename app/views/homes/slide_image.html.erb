@@ -1,0 +1,12 @@
+<div class="slide-image-whitedisplay">
+  <div class="expand-skp-container">
+    <%= link_to request.referer do %>
+      <i class="fas fa-times slide-close-btn"></i>
+    <% end %>
+    <div class="theTarget">
+      <% @main_post_images.each do |main_post_image| %>
+        <%= attachment_image_tag main_post_image, :image %>
+      <% end %>
+    </div>
+  </div>
+</div>

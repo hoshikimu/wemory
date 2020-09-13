@@ -1,0 +1,35 @@
+<div class="form-container">
+  <div class="form-box">
+    <h4 class="form-title">通知一覧</h4>
+    <div class="notification-table">
+      <table class="table table-hover">
+        <% @notifications.each do |notification| %>
+          <tr>
+            <td>
+              <%= notification.visitor.name %><span>さんが</span>
+              <% case notification.action
+                when "like" %>
+                <%= link_to post_image_path(notification.post_image_id) do %>
+                  <span class="visited-post-image">あなたの投稿</span>
+                <% end %>
+                にいいねしました！
+                <% when "comment" %>
+                <%= link_to post_image_path(notification.post_image_id) do %>
+                  <span class="visited-post-image">あなたの投稿</span>
+                <% end %>
+                にコメントしました！
+                <% when "approve" %>
+                あなたを<%= notification.permission_status %>として承認しました！
+                <% when "edit_approve" %>
+                あなたの権限を<%= notification.permission_status %>へ変更しました！
+              <% end %>
+            </td>
+            <td>
+              <%= time_ago_in_words(notification.created_at) + "前" %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

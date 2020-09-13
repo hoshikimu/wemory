@@ -29,6 +29,17 @@
               <%= link_to "承認", approvals_search_path, class:"child-nav-item3" %>
               <%= link_to "カート", cart_images_index_path, class:"child-nav-item4" %>
               <%= link_to "注文履歴", orders_path, class:"child-nav-item5" %>
+              <%= link_to "通知一覧", notifications_path, class:"child-nav-item6" %>
+              <% if unchecked_notifications.any? %>
+                <div class="p-notification-icon">
+                  <i class="fas fa-circle"></i>
+                </div>
+              <% end %>
+              <% if unchecked_notifications.any? %>
+                <div class="child-notification-icon">
+                  <i class="fas fa-circle"></i>
+                </div>
+              <% end %>
             </span>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-item" %>
           </div>
@@ -49,6 +60,13 @@
       <div class="rsp-menu">
         <i class="fas fa-bars"></i>
       </div>
+      <% if user_signed_in? %>
+        <% if unchecked_notifications.any? %>
+          <span class="rsp-p-notification-icon">
+            <i class="fas fa-circle"></i>
+          </span>
+        <% end %>
+      <% end %>
       <div class="menu-whitedisplay">
         <div class="white-display-close-btn">
           <i class="fas fa-times"></i>
@@ -62,6 +80,16 @@
             <%= link_to "承認", approvals_search_path, class:"rsp-menu-item" %>
             <%= link_to "カート", cart_images_index_path, class:"rsp-menu-item" %>
             <%= link_to "注文履歴", orders_path, class:"rsp-menu-item" %>
+            <%= link_to notifications_path, class:"rsp-menu-item" do %>
+              <% if unchecked_notifications.any? %>
+                <span class="rsp-child-notification-icon">
+                  <i class="fas fa-circle"></i>
+                </span>
+                <span>通知一覧</span>
+              <% else %>
+                <span>通知一覧</span>
+              <% end %>
+            <% end %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"rsp-menu-item" %>
           <% else %>
             <%= link_to "お問い合わせ", contacts_contact_path, class:"rsp-menu-item" %>
