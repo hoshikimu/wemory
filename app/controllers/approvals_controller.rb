@@ -85,13 +85,13 @@ class ApprovalsController < ApplicationController
   def post_image_index
     @approver_user_id = params[:approver_id]
     @categories = Category.where(user_id: @approver_user_id)
-    @post_images = PostImage.where(user_id: @approver_user_id).page(params[:page]).per(50)
+    @post_images = PostImage.where(user_id: @approver_user_id).page(params[:page]).per(30)
   end
 
   def post_image_index_by_category
     @approver_user_id = params[:approver_id]
     @categories = Category.where(user_id: @approver_user_id)
-    @post_images = PostImage.where(user_id: @approver_user_id, category_id: params[:category_id]).page(params[:page]).per(50)
+    @post_images = PostImage.where(user_id: @approver_user_id, category_id: params[:category_id]).page(params[:page]).per(30)
   end
 
 end
