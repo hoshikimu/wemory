@@ -391,7 +391,6 @@ footer {
 }
 
 @media (max-width:1366px) {
-  // 投稿詳細画面
   .post-comment-whitedisplay {
     height: 25vh;
     left: 10%;
@@ -448,7 +447,7 @@ footer {
   }
 
   .post-comment-whitedisplay {
-    height: 25vh;
+    height: 26vh;
     left: 10%;
     width: 80%;
   }
@@ -652,6 +651,22 @@ footer {
   }
 }
 
+@media (max-width:736px) {
+  .post-comment-whitedisplay {
+    height: 40vh;
+    left: 10%;
+    width: 80%;
+  }
+}
+
+@media (max-width:667px) {
+  .post-comment-whitedisplay {
+    height: 43vh;
+    left: 10%;
+    width: 80%;
+  }
+}
+
 @media (max-width:425px) {
   // 共通
   .footer-nav-logo {
@@ -793,5 +808,13 @@ footer {
   .order-images-container img {
     width: 50px;
     height: 50px;
+  }
+}
+
+@media (max-width:375px) {
+  .post-comment-whitedisplay {
+    height: 33vh;
+    left: 10%;
+    width: 80%;
   }
 }
