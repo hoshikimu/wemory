@@ -390,6 +390,14 @@ footer {
   color: white;
 }
 
+@media (max-width:1366px) {
+  .post-comment-whitedisplay {
+    height: 25vh;
+    left: 10%;
+    width: 80%;
+  }
+}
+
 @media (max-width:1024px) {
   // 共通
   .form-box {
@@ -439,7 +447,7 @@ footer {
   }
 
   .post-comment-whitedisplay {
-    height: 28vh;
+    height: 26vh;
     left: 10%;
     width: 80%;
   }
@@ -528,7 +536,7 @@ footer {
   }
 
   .post-comment-whitedisplay {
-    height: 50vh;
+    height: 46vh;
     left: 10%;
     width: 80%;
   }
@@ -640,6 +648,22 @@ footer {
   .order-images-container img {
     width: 80px;
     height: 80px;
+  }
+}
+
+@media (max-width:736px) {
+  .post-comment-whitedisplay {
+    height: 40vh;
+    left: 10%;
+    width: 80%;
+  }
+}
+
+@media (max-width:667px) {
+  .post-comment-whitedisplay {
+    height: 43vh;
+    left: 10%;
+    width: 80%;
   }
 }
 
@@ -784,5 +808,13 @@ footer {
   .order-images-container img {
     width: 50px;
     height: 50px;
+  }
+}
+
+@media (max-width:375px) {
+  .post-comment-whitedisplay {
+    height: 33vh;
+    left: 10%;
+    width: 80%;
   }
 }
