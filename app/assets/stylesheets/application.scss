@@ -390,6 +390,15 @@ footer {
   color: white;
 }
 
+@media (max-width:1366px) {
+  // 投稿詳細画面
+  .post-comment-whitedisplay {
+    height: 25vh;
+    left: 10%;
+    width: 80%;
+  }
+}
+
 @media (max-width:1024px) {
   // 共通
   .form-box {
@@ -439,7 +448,7 @@ footer {
   }
 
   .post-comment-whitedisplay {
-    height: 28vh;
+    height: 25vh;
     left: 10%;
     width: 80%;
   }
@@ -528,7 +537,7 @@ footer {
   }
 
   .post-comment-whitedisplay {
-    height: 50vh;
+    height: 46vh;
     left: 10%;
     width: 80%;
   }
@@ -623,7 +632,7 @@ footer {
   .post-comment-whitedisplay {
     width: 80%;
     left: 10%;
-    height: 24vh;
+    height: 40vh;
   }
 
   .post-comment-form {
