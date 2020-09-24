@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
   resources :categories, except: [:index, :show]
   resources :shippings, except: [:index, :show]
-  
+
   get '/orders/about' => 'orders#about'
   get '/orders/completion' => 'orders#completion'
   resources :orders, except: :edit
