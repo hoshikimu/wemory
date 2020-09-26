@@ -55,7 +55,7 @@
           <div class="nav-items">
             <%= link_to "注文履歴一覧", contacts_contact_path, class:"nav-item" %>
             <%= link_to "会員一覧", new_user_registration_path, class:"nav-item" %>
-            <%= link_to "ログアウト", new_user_session_path, class:"nav-item" %>
+            <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"nav-item" %>
           </div>
         </nav>
       <% else %>
