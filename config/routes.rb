@@ -46,4 +46,8 @@ Rails.application.routes.draw do
 
   get 'contacts/contact' => 'contacts#contact'
   post 'contacts/create' => 'contacts#contact_create'
+
+  namespace :admin do
+    get 'top' => 'homes#top'
+  end
 end
