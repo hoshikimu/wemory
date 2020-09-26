@@ -44,6 +44,20 @@
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-item" %>
           </div>
         </nav>
+      <% elsif admin_signed_in? %>
+        <nav class="header-nav">
+          <div class="nav-logo">
+            <%= link_to "wemory", about_path %>
+          </div>
+          <div class="nav-user">
+            <span><i class="fas fa-user"></i><%= current_admin.name %>さん</span>
+          </div>
+          <div class="nav-items">
+            <%= link_to "注文履歴一覧", contacts_contact_path, class:"nav-item" %>
+            <%= link_to "会員一覧", new_user_registration_path, class:"nav-item" %>
+            <%= link_to "ログアウト", new_user_session_path, class:"nav-item" %>
+          </div>
+        </nav>
       <% else %>
         <nav class="header-nav">
           <div class="nav-logo">
