@@ -1,5 +1,5 @@
 class Admin::HomesController < Admin::ApplicationController
-  def top
+  def admin_top
     
   end
 end

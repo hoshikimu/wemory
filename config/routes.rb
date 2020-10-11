@@ -48,6 +48,6 @@ Rails.application.routes.draw do
   post 'contacts/create' => 'contacts#contact_create'
 
   namespace :admin do
-    get 'top' => 'homes#top'
+    get 'top' => 'homes#admin_top'
   end
 end
